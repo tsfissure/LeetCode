@@ -11,10 +11,9 @@ public:
 
 		for (int i = 0; i < numRows; ++i) {
 			bool bUp = false;
-			for (int iMoveDis, j = i; j < (int)s.size(); j += iMoveDis) {
+			for (int iMoveDis, j = i; j < (int)s.size(); j += iMoveDis, bUp ^= true) {
 				iMoveDis = computeMoveDistance(i, numRows, bUp);
 				if (iMoveDis > 0) kResult += s[j];
-				bUp ^= true;
 			}
 		}
 		return kResult;
