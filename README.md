@@ -7,4 +7,4 @@ TODO:
   
 |ProblemId|ProblemName|Solution|
 |:------:|:--------------:|---------:|
-|1006|ZigZag-Conversion|[Click](#/1006-ZigZag-Conversion)|
+|1006|ZigZag-Conversion|[Click](/1006-ZigZag-Conversion)|
