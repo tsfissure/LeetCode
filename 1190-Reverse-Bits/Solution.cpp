@@ -1,0 +1,1 @@
+class Solution {public:	uint32_t reverseBits(uint32_t n) {		uint32_t uResult = 0;		for (int i = 0; i < 32; ++i) {			uResult = uResult << 1 | (n & 1 << i) > 0;		}		return uResult;	}};

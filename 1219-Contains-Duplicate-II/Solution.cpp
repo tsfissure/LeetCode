@@ -1,0 +1,1 @@
+class Solution {public:	bool containsNearbyDuplicate(vector<int>& nums, int k) {		const int iBuffer = 1e5 + 99;		int vis[iBuffer] = {0};		for (int i = 0; i < (int)nums.size(); ++i) {			if (vis[(iBuffer + nums[i]) % iBuffer] && i + 1 - vis[(iBuffer + nums[i]) % iBuffer] <= k) return true;			vis[(iBuffer + nums[i]) % iBuffer] = i + 1;		}		return false;	}};

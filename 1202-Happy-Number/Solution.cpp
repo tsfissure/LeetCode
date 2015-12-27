@@ -1,0 +1,1 @@
+class Solution {public:	bool isHappy(int n) {		bool bVisit[810] = {0};		bool bResult = false;		for (;; bVisit[n] = true) {			int tmp = 0;			for (; n; n /= 10) {				int iLastNum = n % 10;				tmp += iLastNum * iLastNum;			}			n = tmp;			if (bVisit[n]) break;		}		return bVisit[1];	}};

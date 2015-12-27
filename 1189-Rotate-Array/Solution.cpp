@@ -1,0 +1,1 @@
+class Solution {public:	void rotate(vector<int>& nums, int k) {		int iSize = (int)nums.size();		k = iSize - k % iSize;		for (int l = 0, r = k - 1; l < r;)			std::swap(nums[l++], nums[r--]);		for (int l = k, r = iSize - 1; l < r;)			std::swap(nums[l++], nums[r--]);		for (int l = 0, r = iSize - 1; l < r;)			std::swap(nums[l++], nums[r--]);	}};

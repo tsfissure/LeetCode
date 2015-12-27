@@ -1,0 +1,1 @@
+class Solution {public:	int countPrimes(int n) {		int iResult = n > 2;		bool primes[n + 1] = {false};		for (int i = 3, j; i < n; i += 2) {			if (primes[i]) continue;			++iResult;			for (j = i << 1; j < n; j += i) {				primes[j] = true;			}		}		return iResult;	}};
